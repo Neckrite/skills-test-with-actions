@@ -33,8 +33,9 @@ jobs:
 
       - name: Coverage comment
         uses: py-cov-action/python-coverage-comment-action@v3
-        with:
+        env:
           GITHUB_TOKEN: ${{ github.token }}
+        with:
           MINIMUM_GREEN: 90
           MINIMUM_ORANGE: 70
 
